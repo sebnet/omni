@@ -15,7 +15,7 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'productos/**/*.md',
+        path: './contenido/productos/**/*.md',
         typeName: 'Producto',
         remark: {
           plugins: [
