@@ -969,7 +969,7 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
-"@fullhuman/postcss-purgecss@^2.1.2":
+"@fullhuman/postcss-purgecss@^2.1.2", "@fullhuman/postcss-purgecss@latest":
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@fullhuman/postcss-purgecss/-/postcss-purgecss-2.3.0.tgz#50a954757ec78696615d3e118e3fee2d9291882e"
   integrity sha512-qnKm5dIOyPGJ70kPZ5jiz0I9foVOic0j+cOzNDoo8KoCf6HjicIZ99UfO2OmE7vCYSKAAepEwJtNzpiiZAh9xw==
@@ -5028,6 +5028,13 @@ gridsome-plugin-netlify-cms@^1.0.9:
     val-loader "^1.1.1"
     webpack "^4.29.0"
     webpack-dev-middleware "^3.5.1"
+
+gridsome-plugin-purgecss@^1.0.12:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/gridsome-plugin-purgecss/-/gridsome-plugin-purgecss-1.0.12.tgz#dd927c2bd44e04ad08d67fbd5126fe0e1357feef"
+  integrity sha512-SWYUKV2jb0RJrxgLzOx6wKJzEtNu79bzZuZDNMyVH+NqouFGqJQDUUaQqZpKQmgGMdb0P8gAwLx4KQBTYWvFBw==
+  dependencies:
+    "@fullhuman/postcss-purgecss" latest
 
 gridsome@^0.7.0:
   version "0.7.19"
