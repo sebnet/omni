@@ -1,4 +1,9 @@
+const tailwindcss = require('tailwindcss');
 module.exports = {
+  siteName: 'Gridsome Example Site',
+  templates: {
+    Productos: '/producto/:title',
+  },
   siteName: 'Gridsome',
   transformers: {
     remark: {
@@ -15,8 +20,8 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: './contenido/productos/**/*.md',
-        typeName: 'Producto',
+        path: './src/data/productos/*.md',
+        typeName: 'Productos',
         remark: {
           plugins: [
             // ...local plugins
@@ -31,4 +36,11 @@ module.exports = {
       },
     },
   ],
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: [tailwindcss],
+      },
+    },
+  },
 };

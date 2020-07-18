@@ -1,4 +1,0 @@
----
-title: categoria
-nombre: Zapatillas
----

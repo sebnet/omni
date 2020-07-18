@@ -22,7 +22,7 @@
 </template>
 <page-query>
 query {
-  productos: allProducto {
+  productos: allProductos {
     edges {
       node {
         title
