@@ -24,8 +24,8 @@ collections:
           name: 'productoCategoria',
           collection: 'categoria',
           valueField: 'title',
-          displayFields: ['nombre', 'descripcion'],
-          searchFields: ['nombre', 'descripcion', 'cuerpo'],
+          displayFields: ['title', 'descripcion'],
+          searchFields: ['title', 'descripcion', 'cuerpo'],
         }
   - name: 'categoria'
     label: 'Categoría'
