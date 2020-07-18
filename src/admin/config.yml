@@ -23,7 +23,7 @@ collections:
           widget: 'relation',
           name: 'productoCategoria',
           collection: 'categoria',
-          valueField: 'nombre',
+          valueField: 'title',
           displayFields: ['nombre', 'descripcion'],
           searchFields: ['nombre', 'descripcion', 'cuerpo'],
         }
