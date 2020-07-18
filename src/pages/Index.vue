@@ -3,18 +3,18 @@
     <div class="container">
       <h1>List articles</h1>
       <div
-        v-for="article in $page.articles.edges"
-        :key="article.id"
+        v-for="producto in $page.productos.edges"
+        :key="producto.title"
         class="article d-flex"
       >
         <div
           class="article__img"
-          :style="{ 'background-image': 'url(' + article.node.image + ')' }"
+          :style="{ 'background-image': 'url(' + producto.node.image + ')' }"
         ></div>
         <div class="article__body">
-          <g-link :to="article.node.path" class="article__link"></g-link>
-          <h1 class="article__title">{{ article.node.title }}</h1>
-          <p class="article__abstract">{{ article.node.description }}</p>
+          <g-link :to="producto.node.path" class="article__link"></g-link>
+          <h1 class="article__title">{{ producto.node.title }}</h1>
+          <p class="article__abstract">{{ producto.node.description }}</p>
         </div>
       </div>
     </div>
@@ -22,7 +22,7 @@
 </template>
 <page-query>
 query {
-  productos: allProductos {
+  productos: allProducto {
     edges {
       node {
         title
