@@ -49,7 +49,10 @@ module.exports = {
         publicPath: `/admin`,
       },
     },
-    { use: 'gridsome-plugin-netlify-cms-paths' },
+    {
+      use: 'gridsome-plugin-netlify-cms-paths',
+      options: { contentTypes: ['Productos'], coverField: 'imagen' },
+    },
   ],
   css: {
     loaderOptions: {

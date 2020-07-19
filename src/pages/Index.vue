@@ -7,14 +7,16 @@
         :key="producto.title"
         class="article d-flex"
       >
-        <g-image :src="producto.node.imagen" quality="40" />
+        <!-- <g-image :src="producto.node.imagen" quality="100"></g-image> -->
         <div
           class="article__img"
-          :style="{ 'background-image': 'url(' + producto.node.imagen + ')' }"
+          :style="{
+            'background-image': 'url(' + producto.node.imagen.src + ')',
+          }"
         ></div>
         <div class="article__body">
           <g-link :to="producto.node.path" class="article__link"></g-link>
-          <h1 class="article__title">{{ producto.node.title }}</h1>
+          <h1 class="article__title">{{ producto.node.imagen.src }}</h1>
           <p class="article__abstract">{{ producto.node.description }}</p>
         </div>
       </div>
@@ -29,7 +31,7 @@ query {
         title
         description
         cuerpo
-        imagen 
+        imagen (width:300, quality: 100, blur:30, fit:cover)
         path
       }
     }

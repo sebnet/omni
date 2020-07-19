@@ -3,5 +3,5 @@ title: nike aire
 description: nike air nuevas
 cuerpo: zapatillas para running
 productoCategoria: zapatillas
-imagen: sdfs
+imagen: /uploads/img.jpg
 ---
