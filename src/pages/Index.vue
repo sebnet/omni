@@ -7,9 +7,10 @@
         :key="producto.title"
         class="article d-flex"
       >
+        <g-image :src="producto.node.imagen" quality="40" />
         <div
           class="article__img"
-          :style="{ 'background-image': 'url(' + producto.node.image + ')' }"
+          :style="{ 'background-image': 'url(' + producto.node.imagen + ')' }"
         ></div>
         <div class="article__body">
           <g-link :to="producto.node.path" class="article__link"></g-link>
@@ -28,7 +29,7 @@ query {
         title
         description
         cuerpo
-        image
+        imagen 
         path
       }
     }

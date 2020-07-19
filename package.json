@@ -12,6 +12,7 @@
     "@storefront-ui/vue": "^0.7.18",
     "gridsome": "^0.7.0",
     "gridsome-plugin-netlify-cms": "^1.0.9",
+    "gridsome-plugin-netlify-cms-paths": "^0.3.1",
     "gridsome-plugin-purgecss": "^1.0.12",
     "netlify-cms": "^2.10.54",
     "tailwindcss": "^1.5.1"

@@ -80,7 +80,7 @@ query ($path: String!) {
     title
     description
     cuerpo
-    image
+    imagen
   }
 }
 </page-query>

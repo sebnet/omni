@@ -49,6 +49,7 @@ module.exports = {
         publicPath: `/admin`,
       },
     },
+    { use: 'gridsome-plugin-netlify-cms-paths' },
   ],
   css: {
     loaderOptions: {
