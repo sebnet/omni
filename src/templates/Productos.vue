@@ -71,8 +71,6 @@
         <p>{{ $page.producto.cuerpo }}</p>
         <div v-html="$page.producto.cuerpo"></div>
       </div>
-      <SfButton>saldkfj</SfButton>
-      <SfBottomNavigation />
     </div>
   </Layout>
 </template>
@@ -87,11 +85,8 @@ query ($path: String!) {
 }
 </page-query>
 <script>
-import '@storefront-ui/vue/styles.scss';
-import { SfBottomNavigation, SfCircleIcon, SfIcon } from '@storefront-ui/vue';
-import { SfButton } from '@storefront-ui/vue';
 export default {
-  components: { SfButton, SfBottomNavigation, SfCircleIcon, SfIcon },
+  components: {},
   metaInfo() {
     return {
       title: this.$page.producto.title,

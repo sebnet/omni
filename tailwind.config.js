@@ -21,7 +21,7 @@ module.exports = {
         return options;
       });
   },
-  purge: [],
+  purge: { enabled: false },
   theme: {
     extend: {},
   },
