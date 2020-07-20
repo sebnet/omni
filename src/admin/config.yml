@@ -36,3 +36,82 @@ collections:
     create: true
     fields:
       - { label: 'Nombre', name: 'title', widget: 'string' }
+  - label: 'Banners'
+    name: 'banners'
+    files:
+      - label: 'Banners'
+        name: 'banners'
+        files:
+          - label: 'Banners'
+            name: 'banners'
+            file: 'src/data/banners.yml'
+            fields:
+              - {
+                  label: 'Foto Banner Izquierdo',
+                  name: 'imagenBannerIzquierdo',
+                  widget: 'image',
+                  required: false,
+                }
+              - {
+                  label: 'Texto Banner Izquierdo',
+                  name: 'textoBannerIzquierdo',
+                  widget: 'string',
+                }
+              - {
+                  label: 'Foto Banner Derecho',
+                  name: 'imagenBannerDerecho',
+                  widget: 'image',
+                  required: false,
+                }
+              - {
+                  label: 'Texto Banner Derecho',
+                  name: 'textoBannerDerecho',
+                  widget: 'string',
+                }
+  - label: 'General'
+    name: 'general'
+    files:
+      - label: 'informacion'
+        name: 'informacion'
+        file: 'src/data/info.yml'
+        fields:
+          - {
+              label: 'Nombre de la tienda',
+              name: 'title',
+              widget: string,
+              required: false,
+            }
+          - {
+              label: 'Dirección',
+              name: 'direccion',
+              widget: string,
+              required: false,
+            }
+          - { label: 'Logo', name: 'imagen', widget: 'image', required: false }
+          - { label: 'Icono', name: 'icono', widget: 'image', required: false }
+          - { label: 'Whatsapp', name: 'whatsapp', widget: 'string' }
+          - {
+              label: 'Facebook',
+              name: 'facebook',
+              widget: 'string',
+              required: false,
+            }
+          - {
+              label: 'Instagram',
+              name: 'instagram',
+              widget: 'string',
+              required: false,
+            }
+          - {
+              label: 'Twitter',
+              name: 'twitter',
+              widget: 'string',
+              required: false,
+            }
+          - {
+              label: 'Pinterest',
+              name: 'pinterest',
+              widget: 'string',
+              required: false,
+            }
+          - { label: 'Email', name: 'email', widget: 'string', required: false }

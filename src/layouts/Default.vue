@@ -1,5 +1,12 @@
 <template>
   <div class="layout">
+    <Header></Header>
+    <!-- <a
+        href="https://wa.me/541169393641?text=I'm%20interested%20in%20your%20car%20for%20sale"
+        >ksksk</a
+      > -->
+    <BannerLeft />
+
     <slot />
   </div>
 </template>
@@ -10,17 +17,13 @@ query {
   }
 }
 </static-query>
-<style>
-body {
-  background-color: #f4f4f4;
-  padding: 0;
-  margin: 0;
-}
-@media screen and (min-width: 992px) {
-  .container {
-    width: 60%;
-    margin: 0 auto;
-    padding: 30px 0px;
-  }
-}
-</style>
+<script>
+import Header from '~/layouts/Header.vue';
+import BannerLeft from '~/layouts/BannerLeft.vue';
+export default {
+  components: {
+    Header,
+    BannerLeft,
+  },
+};
+</script>

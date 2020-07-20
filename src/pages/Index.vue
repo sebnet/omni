@@ -1,24 +1,22 @@
 <template>
   <Layout>
-    <div class="container">
-      <h1>List articles</h1>
+    <h1>List articles</h1>
+    <div class="flex">
       <div
+        class="flex-1"
         v-for="producto in $page.productos.edges"
         :key="producto.title"
-        class="article d-flex"
       >
+        <SfProductCard
+          :image="producto.node.imagen.src"
+          width="500"
+          :title="producto.node.title"
+          :link="producto.node.path"
+          regular-price="50"
+          special-price="25"
+          class="flex-1"
+        />
         <!-- <g-image :src="producto.node.imagen" quality="100"></g-image> -->
-        <div
-          class="article__img"
-          :style="{
-            'background-image': 'url(' + producto.node.imagen.src + ')',
-          }"
-        ></div>
-        <div class="article__body">
-          <g-link :to="producto.node.path" class="article__link"></g-link>
-          <h1 class="article__title">{{ producto.node.imagen.src }}</h1>
-          <p class="article__abstract">{{ producto.node.description }}</p>
-        </div>
       </div>
     </div>
   </Layout>
@@ -39,7 +37,13 @@ query {
 }
 </page-query>
 <script>
+import { SfProductCard } from '@storefront-ui/vue';
+import '@storefront-ui/vue/styles.scss';
+
 export default {
+  components: {
+    SfProductCard,
+  },
   metaInfo: {
     title: 'My blog',
   },
