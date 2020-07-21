@@ -29,7 +29,12 @@ collections:
           displayFields: ['title', 'descripcion'],
           searchFields: ['title', 'descripcion', 'cuerpo'],
         }
-      - { label: 'Mostrar en página de inicio', name: 'mostrarInicio', widget: 'select', options:["Si", "No"] }
+      - {
+          label: 'Mostrar en página de inicio',
+          name: 'mostrarInicio',
+          widget: 'select',
+          options: ['Si', 'No'],
+        }
   - name: 'categoria'
     label: 'Categoría'
     folder: 'src/data/categorias'
