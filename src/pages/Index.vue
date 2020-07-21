@@ -1,5 +1,9 @@
 <template>
   <Layout>
+    <a
+      href="https://wa.me/541130372560?text=I'm%20interested%20in%20your%20car%20for%20sale"
+      >Whatsapp</a
+    >
     <div class="flex justify-center">
       <div class="flex w-10/12">
         <div
@@ -55,16 +59,19 @@ query ($page: Int){
 <script>
 import { SfProductCard } from '@storefront-ui/vue';
 import '@storefront-ui/vue/styles.scss';
+import info from '@/data/info.yml';
 
 export default {
   components: {
     SfProductCard,
   },
   metaInfo: {
-    title: 'My blog',
+    title: info.title,
   },
   data() {
-    return {};
+    return {
+      info,
+    };
   },
   computed: {
     productosInicio: function() {
