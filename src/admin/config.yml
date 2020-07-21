@@ -19,6 +19,8 @@ collections:
       - { label: 'Nombre', name: 'title', widget: 'string' }
       - { label: 'Descripcion Corta', name: 'description', widget: 'string' }
       - { label: 'Imagen', name: 'imagen', widget: 'image' }
+      - { label: 'Precio', name: 'precio', widget: 'number' }
+      - { label: 'Descuento (%)', name: 'descuento', widget: 'number' }
       - { label: 'Cuerpo', name: 'cuerpo', widget: 'markdown' }
       - {
           label: 'Categoria',
