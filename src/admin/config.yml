@@ -28,8 +28,8 @@ collections:
           file: 'categorias',
           collection: 'categorias',
           valueField: 'categorias',
-          displayFields: ['categorias', 'nombre']
-      #     searchFields: ['title', 'descripcion', 'cuerpo'],
+          displayFields: ['categorias', 'nombre'],
+          searchFields: ['nombre'],
         }
       - {
           label: 'Mostrar en página de inicio',
@@ -144,5 +144,5 @@ collections:
               widget: 'list',
               name: 'categorias',
               label_singular: 'Categoría',
-              field: { label: 'Nombre', name: 'nombre', widget: 'string' }
+              field: { label: 'Nombre', name: 'nombre', widget: 'string' },
             }
