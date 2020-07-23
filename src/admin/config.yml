@@ -29,7 +29,7 @@ collections:
           file: 'categorias',
           collection: 'categorias',
           valueField: 'categorias',
-          displayFields: ['categorias', 'nombre'],
+          displayFields: ['nombre'],
           searchFields: ['nombre'],
         }
       - {
