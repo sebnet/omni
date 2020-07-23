@@ -28,9 +28,9 @@ collections:
           widget: 'relation',
           collection: 'sitio',
           file: 'categorias',
-          valueField: 'categorias.*.nombre',
-          displayFields: ['categorias.*.nombre'],
-          searchFields: ['categorias.*.nombre'],
+          valueField: 'categorias.*',
+          displayFields: ['categorias.*'],
+          searchFields: ['categorias.*'],
         }
       - {
           label: 'Mostrar en página de inicio',
