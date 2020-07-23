@@ -25,11 +25,11 @@ collections:
       - {
           label: 'Categoria',
           widget: 'relation',
-          name: 'productoCategoria',
-          collection: 'categoria',
-          valueField: 'title',
-          displayFields: ['title', 'descripcion'],
-          searchFields: ['title', 'descripcion', 'cuerpo'],
+          file: 'categorias',
+          collection: 'categorias',
+          valueField: 'categorias',
+          displayFields: ['categorias', 'nombre'],
+      #     searchFields: ['title', 'descripcion', 'cuerpo'],
         }
       - {
           label: 'Mostrar en página de inicio',
@@ -37,13 +37,13 @@ collections:
           widget: 'select',
           options: ['Si', 'No'],
         }
-  - name: 'categoria'
-    label: 'Categoría'
-    folder: 'src/data/categorias'
-    slug: '{{slug}}'
-    create: true
-    fields:
-      - { label: 'Nombre', name: 'title', widget: 'string' }
+  # - name: 'categoria'
+  #   label: 'Categoría'
+  #   folder: 'src/data/categorias'
+  #   slug: '{{slug}}'
+  #   create: true
+  #   fields:
+  #     - { label: 'Nombre', name: 'title', widget: 'string' }
   - label: 'Sitio'
     name: 'sitio'
     files:
@@ -135,3 +135,14 @@ collections:
               required: false,
             }
           - { label: 'Email', name: 'email', widget: 'string', required: false }
+      - label: 'Categorias'
+        name: 'categorias'
+        file: 'source/data/categorias.yml'
+        fields:
+          - {
+              label: 'Categorias',
+              widget: 'list',
+              name: 'categorias',
+              label_singular: 'Categoría'
+              field: { label: 'Nombre', name: 'nombre', widget: 'string' },
+            }

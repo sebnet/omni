@@ -10,30 +10,21 @@
         <BannerLeft />
 
         <slot />
-        <SfBottomNavigation>
-          <SfBottomNavigationItem
-            :icon="icon"
-            :label="label"
-            :icon-active="iconActive"
-            :is-active="currentIcon === iconActive"
-            @click="currentIcon = iconActive"
-          />
-          <SfBottomNavigationItem
-            v-for="(item, key) in items"
-            :key="key"
-            :icon="item.icon"
-            :icon-active="item.iconActive"
-            :label="item.label"
-            icon-size="20px"
-            :is-active="currentIcon === item.iconActive"
-            @click="currentIcon = item.iconActive"
-          />
-          <SfBottomNavigationItem
-            label="Carrito"
-            icon="add_to_cart"
-            is-floating
-          />
-        </SfBottomNavigation>
+
+        <!-- lg:invisible xl:invisible -->
+        <div class="visible ">
+          <SfBottomNavigation>
+            <SfBottomNavigationItem
+              v-for="item in navigationItems"
+              :key="item.icon"
+              :icon="item.icon"
+              :label="item.label"
+              :is-floating="item.isFloating"
+              :is-active="false"
+              @click="item.onClick"
+            />
+          </SfBottomNavigation>
+        </div>
       </div>
     </main>
   </div>
@@ -59,12 +50,49 @@ export default {
     SfCircleIcon,
     SfIcon,
   },
+  methods: {
+    openMenu() {
+      this.showMenu = true;
+    },
+    openInfo() {
+      console.log('info');
+    },
+    openContacto() {
+      console.log('contacto');
+    },
+    openCarrito() {
+      console.log('carrito');
+    },
+  },
   data() {
     return {
-      items: [
-        { icon: 'menu', iconActive: '', label: 'Productos' },
-        { icon: 'info_circle', iconActive: 'info_fill', label: 'Info' },
-        { icon: 'edit', iconActive: 'profile_fill', label: 'Contacto' },
+      showMenu: false,
+      navigationItems: [
+        {
+          icon: 'menu',
+          iconActive: '',
+          label: 'Productos',
+          onClick: this.openMenu,
+        },
+        {
+          icon: 'info_circle',
+          iconActive: 'info_fill',
+          label: 'Info',
+          onClick: this.openInfo,
+        },
+        {
+          icon: 'edit',
+          iconActive: 'profile_fill',
+          label: 'Contacto',
+          onClick: this.openContacto,
+        },
+        {
+          icon: 'add_to_cart',
+          iconActive: 'add_to_cart',
+          label: 'Carrito',
+          onClick: this.openCarrito,
+          isFloating: true,
+        },
       ],
       currentIcon: 'heart_fill',
       label: 'Home',
