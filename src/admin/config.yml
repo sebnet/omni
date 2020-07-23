@@ -27,7 +27,7 @@ collections:
           name: 'producto_categoria',
           widget: 'relation',
           file: 'categorias',
-          collection: 'categorias',
+          collection: 'sitio',
           valueField: 'categorias.*.nombre',
           displayFields: ['categorias.*.nombre'],
           searchFields: ['categorias.*.nombre'],
