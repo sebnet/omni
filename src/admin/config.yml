@@ -26,8 +26,8 @@ collections:
           label: 'Categoria',
           name: 'producto_categoria',
           widget: 'relation',
-          file: 'categorias',
           collection: 'sitio',
+          file: 'categorias',
           valueField: 'categorias.*.nombre',
           displayFields: ['categorias.*.nombre'],
           searchFields: ['categorias.*.nombre'],
@@ -35,8 +35,7 @@ collections:
       - {
           label: 'Mostrar en página de inicio',
           name: 'mostrarInicio',
-          widget: 'select',
-          options: ['Si', 'No'],
+          widget: 'boolean',
         }
   # - name: 'categoria'
   #   label: 'Categoría'
