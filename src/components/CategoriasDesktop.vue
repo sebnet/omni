@@ -12,7 +12,7 @@
   </div>
 </template>
 <script>
-import categorias from '@/data/categorias.yaml';
+import categorias from '@/data/categorias.yml';
 export default {
   data() {
     return {
