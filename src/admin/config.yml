@@ -28,7 +28,7 @@ collections:
           file: 'categorias',
           collection: 'categorias',
           valueField: 'categorias',
-          displayFields: ['categorias', 'nombre'],
+          displayFields: ['categorias', 'nombre']
       #     searchFields: ['title', 'descripcion', 'cuerpo'],
         }
       - {
@@ -143,6 +143,6 @@ collections:
               label: 'Categorias',
               widget: 'list',
               name: 'categorias',
-              label_singular: 'Categoría'
-              field: { label: 'Nombre', name: 'nombre', widget: 'string' },
+              label_singular: 'Categoría',
+              field: { label: 'Nombre', name: 'nombre', widget: 'string' }
             }
