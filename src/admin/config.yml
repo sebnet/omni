@@ -18,12 +18,9 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: 'Nombre', name: 'title', widget: 'string' }
       - { label: 'Descripcion Corta', name: 'description', widget: 'string' }
-      - {
-          label: 'Imagen',
-          name: 'imagen',
-          widget: 'image',
-          allow_multiple: true,
-        }
+      - { label: 'Imagen 1', name: 'imagen1', widget: 'image' }
+      - { label: 'Imagen 2', name: 'imagen2', widget: 'image' }
+      - { label: 'Imagen 3', name: 'imagen3', widget: 'image' }
       - { label: 'Precio', name: 'precio', widget: 'number' }
       - { label: 'Descuento (%)', name: 'descuento', widget: 'number' }
       - { label: 'Cuerpo', name: 'cuerpo', widget: 'markdown' }

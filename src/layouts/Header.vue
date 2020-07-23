@@ -32,6 +32,7 @@
                   href="#"
                   >Productos</a
                 >
+                <categorias-desktop>
               </li>
               <li>
                 <a
@@ -102,8 +103,11 @@
 </template>
 
 <script>
+import CategoriasDesktop from '@/components/CategoriasDesktop.vue'
 export default {
-  components: {},
+  components: {
+      CategoriasDesktop
+  },
   methods: {
     clickMenu() {
       console.log('hola');
@@ -112,45 +116,7 @@ export default {
   data() {
     return {
       showMenu: false,
-      categories: [
-        {
-          title: 'Clothing',
-          subcategories: [
-            { title: 'Skirts' },
-            { title: 'Sweaters' },
-            { title: 'Dresses' },
-            { title: 'TShirts' },
-            { title: 'Pants' },
-            { title: 'Underwear' },
-            { title: 'Jackets' },
-            { title: 'Blouses' },
-          ],
-        },
-        {
-          title: 'Accesories',
-          subcategories: [
-            { title: 'Bags & Purses' },
-            { title: 'Belts' },
-            { title: 'Gloves' },
-            { title: 'Hats' },
-          ],
-        },
-        {
-          title: 'Shoes',
-          subcategories: [
-            { title: 'Boots' },
-            { title: 'Heels' },
-            { title: 'Flat shoes' },
-            { title: 'Loafers' },
-            { title: 'Sandals' },
-            { title: 'Slippers' },
-            { title: 'Trainers' },
-          ],
-        },
-      ],
     };
   },
 };
 </script>
-
-<style></style>

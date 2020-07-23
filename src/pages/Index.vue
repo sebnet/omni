@@ -47,7 +47,7 @@ query ($page: Int){
         title
         description
         cuerpo
-        imagen (width:600, height:600, quality: 50, blur:50)
+        imagen1 (width:600, height:600, quality: 50, blur:50)
         precio
         descuento
         path
@@ -79,7 +79,7 @@ export default {
       return this.$page.productos.edges.map(function(el) {
         return {
           title: el.node.title,
-          imagen: el.node.imagen,
+          imagen: el.node.imagen1,
           path: el.node.path,
           precio: `$${el.node.precio}`,
           descuento: el.node.descuento ? `${el.node.descuento}%` : '',
