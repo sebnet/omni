@@ -29,8 +29,8 @@ collections:
           file: 'categorias',
           collection: 'categorias',
           valueField: 'categorias',
-          displayFields: ['nombre'],
-          searchFields: ['nombre'],
+          displayFields: ['name'],
+          searchFields: ['name'],
         }
       - {
           label: 'Mostrar en página de inicio',
