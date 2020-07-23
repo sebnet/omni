@@ -28,7 +28,7 @@ collections:
           widget: 'relation',
           file: 'categorias',
           collection: 'sitio',
-          valueField: 'categorias.*.nombre',
+          valueField: 'nombre',
           displayFields: ['nombre'],
           searchFields: ['nombre'],
         }
